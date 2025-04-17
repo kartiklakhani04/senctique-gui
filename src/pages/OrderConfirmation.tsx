@@ -1,4 +1,4 @@
-import {useLocation, Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import styles from "../styles/OrderConfirmation.module.css";
 import {OrderData} from "../models/OrderData.tsx";
 

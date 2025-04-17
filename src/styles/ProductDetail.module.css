@@ -224,3 +224,18 @@ hr {
         flex-direction: row;
     }
 }
+
+.outOfStock {
+    color: #d93025; /* red */
+    font-weight: bold;
+}
+
+.lowStock {
+    color: #e69500; /* amber/orange */
+    font-weight: bold;
+}
+
+.inStock {
+    color: #2f8f4e; /* green */
+}
+

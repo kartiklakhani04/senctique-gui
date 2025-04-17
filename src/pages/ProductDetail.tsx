@@ -100,7 +100,26 @@ const ProductDetail: React.FC = () => {
                     <p>Gender: {product.gender}</p>
                     <p>Size: {product.size}</p>
                     <p>Rating: {product.rating} ★</p>
-
+                    <br/>
+                    <p>
+                        Stock:{' '}
+                        <span
+                            className={
+                                product.stock === 0
+                                    ? styles.outOfStock
+                                    : product.stock < 10
+                                        ? styles.lowStock
+                                        : styles.inStock
+                            }
+                        >
+                        {product.stock === 0
+                            ? 'Out of stock'
+                            : product.stock < 10
+                                ? `Only ${product.stock} left`
+                                : `${product.stock} available`}
+                        </span>
+                    </p>
+                    
                     <div className={styles.quantity_container}>
                         <span className={styles.quantity_label}>Quantity: </span>
                         <button className={styles.quantity_btn} onClick={() => updateQuantity(quantity - 1)}>

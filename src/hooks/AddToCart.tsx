@@ -22,11 +22,16 @@ const AddToCart = ({productId}:
 
     const toggleCart = async () => {
         const method = inCart ? "DELETE" : "POST";
-        await fetch(`${CART_URL}/${productId}`, {
+        const response: Response = await fetch(`${CART_URL}/${productId}`, {
             method,
             credentials: "include",
         });
-        setInCart(!inCart);
+        if (!response.ok) {
+            const errorText = await response.text();
+            alert(`${errorText}`);
+        } else {
+            setInCart(!inCart);
+        }
     };
 
     return {inCart, toggleCart};

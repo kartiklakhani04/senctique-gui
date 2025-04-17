@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import styles from "../styles/Account.module.css";
 import {getLoggedInUser, USER_URL} from "../utils/api.tsx";
 import {useNavigate} from "react-router-dom";
-import {BiSolidShow, BiSolidHide} from "react-icons/bi";
+import {BiSolidHide, BiSolidShow} from "react-icons/bi";
 
 const Account = () => {
     const [firstName, setFirstName] = useState("");

@@ -32,6 +32,7 @@ export interface Product {
     ingredients: string;
     gender: Gender;
     category: Category;
+    stock: number;
 }
 
 export interface ProductListProps {
